@@ -16,6 +16,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&display=swap"
     rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Demo Project</title>
 </head>
 
@@ -26,7 +28,7 @@
     <!-- search bar -->
     <div class="w-full mb-4 mt-3">
       <div class="mx-auto w-full md:w-1/2 relative">
-      <form action="">
+        <form action="">
           <label class="absolute top-2 left-4 fill-neutral-500 " for="search_field">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path
@@ -37,26 +39,48 @@
           <input type="text" id="search_field"
             class="w-full rounded-3xl ps-12 pb-2 py-1.5 bg-neutral-800 focus:outline-none text-neutral-500 placeholder-neutral-500 font-semibold"
             placeholder="Search creators and topics">
-      </form>
+        </form>
       </div>
     </div>
     <!-- navigation bar -->
     <nav>
       <ul class="flex item-center gap-1.5 flex-wrap">
         <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-white text-xs font-bold cursor-pointer">All</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Indie games</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Video Games</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Pop culture</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Comedy</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Role playing games
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Indie games</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Video Games</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Pop culture</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Comedy</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Role playing games
         </li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">True crime</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Art tutorial</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Handicrafts</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Illustrations</li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Musical education
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          True crime</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Art tutorial</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Handicrafts</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Illustrations</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Musical education
         </li>
-        <li class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">Educational</li>
+        <li
+          class="pt-2 pb-2.5 px-2.5 rounded-lg bg-neutral-700 text-neutral-400 font-bold text-xs hover:bg-neutral-600 cursor-pointer">
+          Educational</li>
       </ul>
     </nav>
     <!-- suggestions based on membership -->
@@ -72,14 +96,15 @@
             </svg>
           </span>
           <div class="flex items-center justify-center gap-2">
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
+            <div class="pre_btn1 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
 
               <svg class="fill-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
               </svg>
             </div>
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
+            <div
+              class="next_btn1 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
               <svg class="fill-neutral-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
@@ -89,63 +114,83 @@
         </div>
       </div>
 
-      <div class="grid gap-3 xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img1.jpg" alt="Suggested images">
+      <!-- Swiper -->
+      <div class="swiper mySwiper_1 my-3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                src="assets/media/img/row-1/row-1-img1.jpg" alt="Suggested images">
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Gameyy Builds</h3>
+                <p class="text-xs font-semibold text-neutral-500">Building a world with junk and imagination...</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Gameyy Builds</h3>
-            <p class="text-xs font-semibold text-neutral-500">Building a world with junk and imagination...</p>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-1/row-1-img2.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">YaBoyRoshi</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating YouTube Content</p>
+              </div>
+            </div>
           </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-1/row-1-img3.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Poiyomi</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating Shaders</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-1/row-1-img4.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Paapu</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating Assets, Tokens and Maps for all Niches!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-1/row-1-img5.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Forge Labs</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating YouTube Videos</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-1/row-1-img6.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">OnMod</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating Minecraft YouTube videos, maps, modpacks and
+                  more!</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img2.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">YaBoyRoshi</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating YouTube Content</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img3.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Poiyomi</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating Shaders</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img4.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Paapu</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating Assets, Tokens and Maps for all Niches!</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img5.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Forge Labs</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating YouTube Videos</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-1/row-1-img6.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">OnMod</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating Minecraft YouTube videos, maps, modpacks and
-              more!</p>
-          </div>
-        </div>
-      </div>
     </section>
     <section>
       <!-- Trending creators -->
@@ -158,14 +203,15 @@
             </svg>
           </span>
           <div class="flex items-center justify-center gap-2">
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
+            <div class="pre_btn3 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
 
               <svg class="fill-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
               </svg>
             </div>
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
+            <div
+              class="next_btn3 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
               <svg class="fill-neutral-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
@@ -174,97 +220,107 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/pChal.png" alt="creators-img">
-            </div>
+      <div class="swiper mySwiper_3 my-3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">pChal</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating Legendry Nuzlockes</p>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/pChal.png" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">pChal</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating Legendry Nuzlockes</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/deadpool.jpg" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">Deadpool</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating MC Command Center Modules for Sim 4</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/sixam-cc.jpg" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">SIXAM CC</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating Custom Content for Sim 4</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/deadpool.jpg" alt="creators-img">
-            </div>
+          <div class="swiper-slide">
             <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">Deadpool</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating MC Command Center Modules for Sim 4</p>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/spooferpro.png" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">BitsnBytes</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating Spooferpro</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/2real1.jpg" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">2REAL</h3>
+                  <p class="text-xs font-semibold text-neutral-500">bietet Realistic Traffic Modes for Assetto Corsa
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/sentate.png" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">Sentate</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating Custom Content for Sim 4</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/sixam-cc.jpg" alt="creators-img">
-            </div>
+          <div class="swiper-slide">
             <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">SIXAM CC</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating Custom Content for Sim 4</p>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="border border-neutral-800 w-full rounded-lg" src="assets/media/img/creators-img/razed.png"
+                    alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">Razed</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating modes and shaders for PC games</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/kawaiStacie.jpg" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">KawaiiStacie</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating modes for Sims 4</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12">
+                  <img class="w-full rounded-lg" src="assets/media/img/creators-img/blackrack.jpg" alt="creators-img">
+                </div>
+                <div>
+                  <h3 class="text-sm text-neutral-200 font-semibold">Blackrack</h3>
+                  <p class="text-xs font-semibold text-neutral-500">Creating Scatterer and EVE-Redux - visual mods
+                    for KSP
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/spooferpro.png" alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">BitsnBytes</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating Spooferpro</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/2real1.jpg" alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">2REAL</h3>
-              <p class="text-xs font-semibold text-neutral-500">bietet Realistic Traffic Modes for Assetto Corsa</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/sentate.png" alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">Sentate</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating Custom Content for Sim 4</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="border border-neutral-800 w-full rounded-lg" src="assets/media/img/creators-img/razed.png"
-                alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">Razed</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating modes and shaders for PC games</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/kawaiStacie.jpg" alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">KawaiiStacie</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating modes for Sims 4</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12">
-              <img class="w-full rounded-lg" src="assets/media/img/creators-img/blackrack.jpg" alt="creators-img">
-            </div>
-            <div>
-              <h3 class="text-sm text-neutral-200 font-semibold">Blackrack</h3>
-              <p class="text-xs font-semibold text-neutral-500">Creating Scatterer and EVE-Redux - visual mods for KSP
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
     <section>
       <!-- explore topics -->
@@ -278,7 +334,7 @@
       </div>
       <div class="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-3">
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-red-900 to-red-600 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-red-900 to-red-600 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Podcasts & Shows</h3>
               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
@@ -290,7 +346,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-blue-900 to-blue-600 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-blue-900 to-blue-600 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Tabletop games</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-blue-500">
@@ -302,7 +358,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-yellow-900 to-yellow-600 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-yellow-900 to-yellow-600 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Music</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -315,7 +371,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-pink-900 to-pink-600 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-pink-900 to-pink-600 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Writing</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-pink-500">
@@ -327,7 +383,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-slate-800 to-slate-400 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-slate-800 to-slate-400 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Apps & software</h3>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -339,7 +395,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-cyan-900 to-cyan-600 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-cyan-900 to-cyan-600 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Visual arts</h3>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -351,7 +407,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-slate-800 to-slate-500 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-slate-800 to-slate-500 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Video games</h3>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -363,7 +419,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-emerald-900 to-emerald-200 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-emerald-900 to-emerald-200 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Lifestyle</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -376,7 +432,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-yellow-800 to-yellow-400 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-yellow-800 to-yellow-400 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Handicrafts</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -389,7 +445,7 @@
           </div>
         </div>
         <div>
-          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-rose-800 to-rose-500 p-2 px-3">
+          <div class="h-20 w-full rounded-xl bg-gradient-to-tr from-rose-800 to-rose-500 p-2 px-3 cursor-pointer">
             <div class="h-full w-full flex items-end justify-between">
               <h3 class=" text-neutral-200 font-semibold text-sm">Handicrafts</h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-rose-500">
@@ -417,54 +473,60 @@
       </div>
 
       <div class="grid gap-3 xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img1.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img1.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">studio bidou</h3>
             <p class="text-xs font-semibold text-neutral-500">creating the indie platform fighters, Stickfigurez!</p>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img2.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img2.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">MCP</h3>
             <p class="text-xs font-semibold text-neutral-500">Moskow City Project - Assets Corsa</p>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img3.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img3.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Life in 3d</h3>
             <p class="text-xs font-semibold text-neutral-500">Sibling Harmony Behind the Scene</p>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img4.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img4.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">WIRD Designs</h3>
             <p class="text-xs font-semibold text-neutral-500"></p>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img5.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img5.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">OkCorz</h3>
             <p class="text-xs font-semibold text-neutral-500">Creating Animations</p>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
+        <div class="group cursor-pointer mb-5 sm:m-0">
           <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-2/row-2-img6.jpg" alt="Suggested images">
+            <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+              src="assets/media/img/row-2/row-2-img6.jpg" alt="Suggested images">
           </div>
           <div>
             <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">dwight_kovich</h3>
@@ -475,6 +537,7 @@
     </section>p
     <section>
       <!-- Indie games -->
+
       <div class="mt-10 mb-2">
         <p class="text-xs mb-1 font-semibold text-neutral-500">Top creators</p>
         <div class="flex items-center justify-between">
@@ -485,14 +548,14 @@
             </svg>
           </span>
           <div class="flex items-center justify-center gap-2">
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
-
+            <div class="pre_btn2 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-800 cursor-pointer">
               <svg class="fill-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
               </svg>
             </div>
-            <div class="h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
+            <div
+              class="next_btn2 h-7 w-7 rounded-full flex items-center justify-center bg-neutral-700 cursor-pointer hover:bg-neutral-600">
               <svg class="fill-neutral-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 viewBox="0 0 24 24">
                 <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
@@ -501,63 +564,86 @@
           </div>
         </div>
       </div>
-      <div class="grid gap-3 xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img1.jpg" alt="Suggested images">
+      <!-- Swiper -->
+      <div class="swiper mySwiper_2 my-3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img1.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">TALES OF REIN RAVINE</h3>
+                <p class="text-xs font-semibold text-neutral-500">🌲equation indie game in development🌲</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">TALES OF REIN RAVINE</h3>
-            <p class="text-xs font-semibold text-neutral-500">🌲equation indie game in development🌲</p>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img2.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Pony Town Team</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating Pony Town</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img3.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Night-Runners Game</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating a unique racing game</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img4.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">SWGOH.GG</h3>
+                <p class="text-xs font-semibold text-neutral-500">Creating a Website for Star Wars Galaxy of Horses</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img5.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Snowy Moon</h3>
+                <p class="text-xs font-semibold text-neutral-500">Game Development - www.snowymoon.io</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="group cursor-pointer mb-5 sm:m-0">
+              <div>
+                <img class="group-hover:scale-105 duration-300 w-full rounded-xl"
+                  src="assets/media/img/row-3/row-3-img6.jpg" alt="Suggested images">
+              </div>
+              <div>
+                <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">UniqueGees</h3>
+                <p class="text-xs font-semibold text-neutral-500">Developing Indigo Park and Creating YT Content</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img2.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Pony Town Team</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating Pony Town</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img3.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Night-Runners Game</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating a unique racing game</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img4.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">SWGOH.GG</h3>
-            <p class="text-xs font-semibold text-neutral-500">Creating a Website for Star Wars Galaxy of Horses</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img5.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">Snowy Moon</h3>
-            <p class="text-xs font-semibold text-neutral-500">Game Development - www.snowymoon.io</p>
-          </div>
-        </div>
-        <div  class="group cursor-pointer mb-5 sm:m-0">
-          <div>
-            <img class="group-hover:scale-105 duration-300 w-full rounded-xl" src="assets/media/img/row-3/row-3-img6.jpg" alt="Suggested images">
-          </div>
-          <div>
-            <h3 class=" text-neutral-200 mt-2 font-semibold text-sm">UniqueGees</h3>
-            <p class="text-xs font-semibold text-neutral-500">Developing Indigo Park and Creating YT Content</p>
-          </div>
-        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
       </div>
-    </section>p
+    </section>
   </section>
 </body>
 
@@ -566,6 +652,73 @@
 <!-- aos animation js -->
 <script src="assets/venders/aos-master/dist/aos.js"></script>
 <!-- initialize aos animation js -->
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper_1", {
+    slidesPerView: 1, // Default to 1 item for the smallest screens
+    spaceBetween: 12,
+    loop: true,
+    navigation: {
+      nextEl: ".next_btn1",
+      prevEl: ".pre_btn1",
+    },
+    breakpoints: {
+      425: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+  });
+  var swiper = new Swiper(".mySwiper_2", {
+    slidesPerView: 1, // Default to 1 item for the smallest screens
+    spaceBetween: 12,
+    loop: true,
+    navigation: {
+      nextEl: ".next_btn2",
+      prevEl: ".pre_btn2",
+    },
+    breakpoints: {
+      425: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+  });
+  var swiper = new Swiper(".mySwiper_3", {
+    slidesPerView: 1, // Default to 1 item for the smallest screens
+    spaceBetween: 12,
+    loop: true,
+    navigation: {
+      nextEl: ".next_btn3",
+      prevEl: ".pre_btn3",
+    },
+    breakpoints: {
+      425: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 
 <script>
   AOS.init();
